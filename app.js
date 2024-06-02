@@ -7,17 +7,17 @@ const route = require("./routes/routes")
 require("./config/db")
 
 app.use(session({
-    secret: 'api_protal',
-    resave: false,
-    saveUninitialized: true
+  secret: 'api_protal',
+  resave: false,
+  saveUninitialized: true
 }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-    extended: false
+  extended: false
 }));
-app.use('/api',route)
+app.use('/api', route)
 app.listen(port, () => {
-    console.log('Listening on port '+port)
+  console.log('Listening on port ' + port)
 })
 
